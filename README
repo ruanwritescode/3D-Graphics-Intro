@@ -1,0 +1,64 @@
+mtbRPG: virtual mountain biking!
+
+compile using "make"
+run using "./final"
+
+# Ruan Abarbanel
+# CSCI 4229
+
+## my program has two scenes
+
+## The first is an elevated plane intended to simulate a mountain with various trees, rocks, a stream, grass, a trail, and wooden walkways populating it.
+
+## This world is randomly generated using an assortment of rules:
+
+### PRESS R TO RE-INITIALIZE WORLD AND VIEW SOMETHING RANDOM AND NEW
+### PRESS R TO RE-INITIALIZE WORLD AND VIEW SOMETHING RANDOM AND NEW
+### PRESS R TO RE-INITIALIZE WORLD AND VIEW SOMETHING RANDOM AND NEW
+
+1. The terrain samples semi-random elevation data then smoothes itself out using a averaging algorithm. The landscape will always be tend higher elevation towards the left and right edges while always moving steadily downhill.
+
+2. The trail itself navigates the trees and river by either avoiding it or placing a wooden walkway over.
+
+3. The river follows the next lowest point starting from the furthest back row of the lanscape mesh.
+
+4. Rocks and grass are randomly dispersed and have their own rules for size of the "patch" and reach.
+
+5. Trees are distributed so that the trail (in the middle) has the least frequency while it increases towards the outside of the map
+
+### The mountain world is made to feel alive with various animations in the grass, trees, and water. To simulate wind and gravity.
+
+
+## The second world is a test space for the various objects in the scene.
+### Use n to switch to the test space and b to swap items in the test space.
+
+# Key Controls
+
+m : change modes (First Person, Perspective, Orthogonal)
+n : change scene (Mountain, Testing Zone)
+b : change items (Test Space Only)
+
+p : pauses time so you can view light normals at any instance peferred
+
+r : re-initialize scene (this can help you quickly see different orientations of the terrain)
+
+arrow keys: Change view angle up/down and left/right
+
+w a s d: move through world in first person mode
+
+0 : reset viewing angle and first person player position to (0,0)
+
+l : toggle light
+
+t : toggle axes
+
+- : decrease FOV
+= : increas FOV
+
+
+## Some Controls for Perspective Mode ONLY
+
+, : zoon out
+. : zoom in
+
+ESC : close window and terminate program
